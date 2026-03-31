@@ -26,8 +26,8 @@ A supply chain journey where I create a pet via the Petstore API and use that pe
 ### Clone and enter project
 
 ```bash
-git clone https://github.com/umarriaz/connected_systems.git
-cd connected_systems
+git clone https://github.com/UmarRiaz00095/connected-system.git
+cd connected_system
 ```
 
 ### Create virtual environment
