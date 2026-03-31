@@ -1,12 +1,12 @@
 # Connected Systems BDD — API to UI Journey
 
-I built this to demonstrate how a test framework can bridge two separate systems — an API backend and a web UI — where the data flows dynamically from one into the other. No hardcoded values, no shortcuts.
+I built this to demonstrate how a test framework can bridge two separate systems, an API backend and a web UI where the data flows dynamically from one into the other. No hardcoded values, no shortcuts.
 
 ---
 
 ## What This Tests
 
-A supply chain journey where I create a pet via the Petstore API and use that pet's data to drive a checkout flow on SauceDemo. The UI never knows the data in advance — it comes entirely from the API response at runtime.
+A supply chain journey where I create a pet via the Petstore API and use that pet's data to drive a checkout flow on SauceDemo. The UI never knows the data in advance, it comes entirely from the API response at runtime.
 
 ---
 
@@ -71,7 +71,7 @@ HEADLESS=false behave
 
 ## HTML Report
 
-I added a lightweight HTML report using `behave-html-formatter` — no Java or external tools needed.
+I added a lightweight HTML report using `behave-html-formatter` , no Java or external tools needed.
 
 ### Generate the Report
 
@@ -95,7 +95,7 @@ open reports/report.html
 
 ### config.py as single source of truth
 
-I didn't want URLs, timeouts, or retry counts scattered across files. Everything lives in `config.py` — one change and it propagates everywhere.
+I didn't want URLs, timeouts, or retry counts scattered across files. Everything lives in `config.py`, one change and it propagates everywhere.
 
 ### Credentials in .env
 
@@ -126,6 +126,6 @@ In a pipeline:
 ## Notes
 
 * Screenshots on failure are saved to `screenshots/`
-* Petstore is a public API — occasional timeouts are expected and handled
+* Petstore is a public API, occasional timeouts are expected and handled
 * SauceDemo credentials are intentionally public for testing purposes
 * Set `BROWSER_HEADLESS = True` in `config.py` for CI runs
