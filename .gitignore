@@ -1,0 +1,18 @@
+# Python
+venv/
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# Behave
+pretty.output
+*.output
+reports/
+
+# OS
+.DS_Store
+Thumbs.db
