@@ -16,7 +16,7 @@ def create_pet() -> dict:
 
     logger.info(f"Attempting to create pet: {payload}")
 
-    # Public API can be flaky — retry a few times before giving up
+    # Public API can be flaky, retry a few times before giving up
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             response = requests.post(
@@ -32,7 +32,7 @@ def create_pet() -> dict:
             else:
                 logger.warning(f"Attempt {attempt}: Unexpected status {response.status_code}")
         except requests.exceptions.RequestException as e:
-            # Network issues, timeouts etc — log and retry
+            # Network issues, timeouts etc log and retry
             logger.warning(f"Attempt {attempt}: Request failed — {e}")
 
         time.sleep(RETRY_DELAY)

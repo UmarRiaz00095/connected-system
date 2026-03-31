@@ -17,9 +17,20 @@ def step_login(context):
 
 @when("the user completes a checkout using the pet data")
 def step_checkout(context):
-    context.sauce.complete_purchase(context.pet)  
+    context.sauce.complete_purchase(context.pet)
+
+
+@when("the user submits checkout without a first name")
+def step_missing_first_name(context):
+    context.sauce.checkout_with_missing_first_name(context.pet)
 
 
 @then("the order should be completed successfully")
 def step_verify(context):
-    assert context.sauce.is_order_successful() 
+    assert context.sauce.is_order_successful()
+
+
+@then("a validation message should be shown")
+def step_validate_error(context):
+    message = context.sauce.get_checkout_error_message()
+    assert "First Name is required" in message
