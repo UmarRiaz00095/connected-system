@@ -1,9 +1,0 @@
-Feature: Connected Inventory to Storefront Journey # features/connected_journey.feature:1
-
-  @smoke @regression @api @ui
-  Scenario: Create inventory item via API and process it in UI  # features/connected_journey.feature:4
-    Given a new pet is created in the inventory system          # features/steps/connected_steps.py:7
-    When the user logs into the storefront                      # features/steps/connected_steps.py:12
-    And the user completes a checkout using the pet data        # features/steps/connected_steps.py:18
-    Then the order should be completed successfully             # features/steps/connected_steps.py:23
-
