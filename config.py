@@ -15,7 +15,7 @@ API_TIMEOUT = 5
 
 # UI config
 SAUCE_URL = "https://www.saucedemo.com/"
-BROWSER_HEADLESS = True
+BROWSER_HEADLESS = False
 DEFAULT_TIMEOUT = 10000
 
 # Test data defaults
