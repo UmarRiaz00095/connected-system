@@ -71,7 +71,7 @@ HEADLESS=false behave
 
 ## HTML Report
 
-I added a lightweight HTML report using `behave-html-formatter` , no Java or external tools needed.
+I added a lightweight HTML report using `behave-html-formatter` , no external tools needed.
 
 ### Generate the Report
 
@@ -97,7 +97,7 @@ open reports/report.html
 
 I didn't want URLs, timeouts, or retry counts scattered across files. Everything lives in `config.py`, one change and it propagates everywhere.
 
-### Credentials in .env
+### Credentials
 
 For this demo the credentials are hardcoded in `config.py` with a clear comment explaining they shouldn't be in production code.
 
@@ -110,7 +110,7 @@ In a real project:
 
 ### Retry logic in the API client
 
-The Petstore API is a public demo — it's flaky by nature. Instead of failing immediately, I retry 3 times with a short delay before giving up.
+The Petstore API is a public and it's flaky by nature. Instead of failing immediately, I retry 3 times with a short delay before giving up.
 
 ---
 
